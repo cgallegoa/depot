@@ -1,3 +1,4 @@
+# encoding: ISO-8859-1
 #---
 # Excerpted from "Agile Web Development with Rails",
 # published by The Pragmatic Bookshelf.
@@ -6,7 +7,7 @@
 # We make no guarantees that this code is fit for any purpose. 
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
-# encoding: utf-8
+
 Product.delete_all
 
 Product.create!(title: 'Zapatos para gato jet√≥n',
@@ -54,14 +55,12 @@ Product.create!(title: 'Rails Test Prescriptions',
   image_url: 'rtp.jpg',
   price: 34.95)
 
-
-
 # . . .
 
-Product.create!(title: 'Zapatos para Gato JetÛn',
+Product.create!(title: 'Zapatos para Gato Jeton',
   description: 
     %{<p>
-        <em>Bla ble ble blo blu, ·ÈÌÛ˙Ò— , Rails Test Prescriptions</em> is a comprehensive guide to testing
+        <em>Bla ble ble blo blu, se come las tildes , Rails Test Prescriptions</em> is a comprehensive guide to testing
         Rails applications, covering Test-Driven Development from both a
         theoretical perspective (why to test) and from a practical perspective
         (how to test effectively). It covers the core Rails testing tools and
