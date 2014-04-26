@@ -8,17 +8,14 @@
 #---
 require 'test_helper'
 
-class ProductTest < ActiveSupport::TestCase
-
-  test "product price must be positive" do
-    product = Product.new(title:       "My Book Title",
-                          description: "yyy",
-                          image_url:   "zzz.jpg")
-    product.price = -1
-    assert product.invalid?
-    assert_equal ["must be greater than or equal to 0.01"],
-      product.errors[:price]
-
+class StoreControllerTest < ActionController::TestCase
+  test "should get index" do
+    get :index
+    assert_response :success
+    assert_select '#columns #side a', minimum: 4
+    assert_select '#main .entry', 3
+    assert_select 'h3', 'Programming Ruby 1.9'
+    assert_select '.price', /\$[,\d]+\.\d\d/
   end
-  
+
 end
